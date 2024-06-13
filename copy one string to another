@@ -1,0 +1,18 @@
+#include <stdio.h>
+void stringCopy(char *dest, const char *src) {
+    while (*src) {
+        *dest = *src;
+        src++;
+        dest++;
+    }
+    *dest = '\0';
+}
+int main() {
+    char source[] = "Hello, World!";
+    char destination[50];
+    stringCopy(destination, source);
+
+    printf("Source String: %s\n", source);
+    printf("Destination String: %s\n", destination);
+    return 0;
+}
