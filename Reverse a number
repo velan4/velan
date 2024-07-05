@@ -1,0 +1,10 @@
+def reverse(number):
+    reversed_num = 0
+    while number > 0:
+        remainder = number % 10
+        reversed_num = (reversed_num * 10) + remainder
+        number = number // 10
+    return reversed_num
+number = 12345
+reversed = reverse(number)
+print(f"The reverse of {number} is: {reversed}")
